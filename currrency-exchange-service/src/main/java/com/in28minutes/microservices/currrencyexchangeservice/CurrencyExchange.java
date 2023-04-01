@@ -1,7 +1,16 @@
 package com.in28minutes.microservices.currrencyexchangeservice;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.math.BigDecimal;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
 public class CurrencyExchange {
 	
 	private Long id;
@@ -12,49 +21,5 @@ public class CurrencyExchange {
 
 	private BigDecimal conversionMultiple;
 
-	public CurrencyExchange() {
-		
-	}
-	
-	public CurrencyExchange(Long id, String from, String to, BigDecimal conversionMultiple) {
-		super();
-		this.id = id;
-		this.from = from;
-		this.to = to;
-		this.conversionMultiple = conversionMultiple;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getFrom() {
-		return from;
-	}
-
-	public void setFrom(String from) {
-		this.from = from;
-	}
-
-	public String getTo() {
-		return to;
-	}
-
-	public void setTo(String to) {
-		this.to = to;
-	}
-
-	public BigDecimal getConversionMultiple() {
-		return conversionMultiple;
-	}
-
-	public void setConversionMultiple(BigDecimal conversionMultiple) {
-		this.conversionMultiple = conversionMultiple;
-	}
-
-	
+	private String environment;
 }
