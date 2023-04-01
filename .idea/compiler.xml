@@ -8,11 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="currrency-exchange-service" />
+        <module name="currency-conversion-service" />
         <module name="limits-service" />
         <module name="spring-cloud-config-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="currency-conversion-service" target="17" />
       <module name="currrency-exchange-service" target="17" />
       <module name="limits-service" target="17" />
       <module name="spring-cloud-config-server" target="17" />
@@ -20,6 +22,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="currency-conversion-service" options="-parameters" />
       <module name="currrency-exchange-service" options="-parameters" />
       <module name="limits-service" options="-parameters" />
       <module name="spring-cloud-config-server" options="-parameters" />
